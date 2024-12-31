@@ -27,6 +27,9 @@ export default function RootLayout() {
         }
       }} />
       <Stack.Screen name="explore" />
+      <Stack.Screen name="model" options={{
+        presentation:"modal"
+      }} />
     </Stack>
   )
 }

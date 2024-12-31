@@ -1,8 +1,9 @@
-import { Link, Stack, useNavigation } from 'expo-router';
+import { Link, Stack, useNavigation, useRouter } from 'expo-router';
 import { Text, View, StyleSheet, TextInput, Image, Button } from 'react-native';
 
 export default function Home({ }) {
   const navigation = useNavigation();
+  const router = useRouter();
   return (
     <View style={styles.container}>
 
@@ -20,6 +21,7 @@ export default function Home({ }) {
         }
       }}
       >Go to explore</Link>
+      <Button title="Go to Model" onPress={() => router.push("/(home)/model")} />
     </View>
   );
 }
