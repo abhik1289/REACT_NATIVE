@@ -1,25 +1,26 @@
-import { Text, StyleSheet, View } from 'react-native'
-import React, { Component } from 'react'
+import { View, Text, Pressable } from 'react-native'
+import React from 'react'
+import { useRouter } from 'expo-router'
+import { useSearchParams } from 'expo-router/build/hooks';
 
-export default class explore extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.text}>explore</Text>
-      </View>
-    )
-  }
+const explore = () => {
+  const router = useRouter();
+  const params = useSearchParams();
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: "white" }}>
+      <Text>
+        <Pressable onPress={() => router.back()}>
+          <View style={{ backgroundColor: "blue", paddingHorizontal: 10, paddingVertical: 10, width: 150, borderRadius: 10 }}>
+            <Text style={{ color: "white", textAlign: "center" }}>Go Back</Text>
+
+          </View>
+        </Pressable>
+        <Text>
+          Hello {params.get('name')}
+        </Text>
+      </Text>
+    </View>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#25292e',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: '#fff',
-    textAlign: 'center',
-  },
-})
+export default explore
