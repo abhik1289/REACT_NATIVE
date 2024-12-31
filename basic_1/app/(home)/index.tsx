@@ -1,13 +1,13 @@
-import { Link } from 'expo-router';
-import { Text, View, StyleSheet, TextInput, Image } from 'react-native';
+import { Link, useNavigation } from 'expo-router';
+import { Text, View, StyleSheet, TextInput, Image, Button } from 'react-native';
 
-export default function Home() {
+export default function Home({  }) {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home screen</Text>
-      <TextInput style={styles.textInput} defaultValue='Abhik' />
-      <Image source={{ uri:'https://reactnative.dev/docs/assets/p_cat2.png'}} />
-      {/* <Link to="settings">Settings</Link> */}
+     <Text style={styles.text}>
+      This is Home Screen
+     </Text>
     </View>
   );
 }
