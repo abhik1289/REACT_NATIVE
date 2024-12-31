@@ -1,9 +1,9 @@
 import { Stack } from 'expo-router';
-
+import { Alert, Button, Text } from "react-native"
 export default function RootLayout() {
   return (
     <Stack
-    
+
       screenOptions={{
         // title:"Home",
         // headerTintColor:"yellow",
@@ -19,8 +19,13 @@ export default function RootLayout() {
         // headerShown: false,
         headerStyle: {
           backgroundColor: 'white'
+        },
+        headerRight: () => {
+          return (
+            <Button onPress={() => Alert.alert("Hi Bro !!")} title='He' />
+          )
         }
-      }}/>
+      }} />
       <Stack.Screen name="explore" />
     </Stack>
   )
