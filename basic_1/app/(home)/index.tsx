@@ -6,10 +6,20 @@ export default function Home({ }) {
   return (
     <View style={styles.container}>
 
-
+    
       <Text style={styles.text}>This is Home Screen</Text>
-      <Link style={{ fontSize: 20,color:"white",marginVertical:10 }} href="/explore?name=Avik&surname=Patra">Go to explore</Link>
-
+      {/* way 1 */}
+      {/* <Link style={{ fontSize: 20,color:"white",marginVertical:10 }} href="/explore?name=Avik&surname=Patra">Go to explore</Link> */}
+      {/* way 2 send data */}
+      <Link style={{ fontSize: 20, color: "white", marginVertical: 10 }} 
+      href={{
+        pathname: '/explore',
+        params:{
+          name:"Avik",
+          surname:"Patra"
+        }
+      }}
+      >Go to explore</Link>
     </View>
   );
 }
