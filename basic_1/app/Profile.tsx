@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const ModelPage = () => {
+const Profile = () => {
   return (
     <View>
-      <Text>ModelPage</Text>
+      <Text>Profile</Text>
     </View>
   )
 }
 
-export default ModelPage
+export default Profile
