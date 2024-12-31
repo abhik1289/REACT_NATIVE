@@ -8,7 +8,7 @@ export default function Home({ }) {
 
 
       <Text style={styles.text}>This is Home Screen</Text>
-      <Link style={{ fontSize: 20,color:"white",marginVertical:10 }} href="/explore?name=Avik">Go to explore</Link>
+      <Link style={{ fontSize: 20,color:"white",marginVertical:10 }} href="/explore?name=Avik&surname=Patra">Go to explore</Link>
 
     </View>
   );

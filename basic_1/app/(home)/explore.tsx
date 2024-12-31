@@ -16,7 +16,7 @@ const explore = () => {
           </View>
         </Pressable>
         <Text>
-          Hello {params.get('name')}
+          Hello {params.get('name')} {params.get('surname')}
         </Text>
       </Text>
     </View>
