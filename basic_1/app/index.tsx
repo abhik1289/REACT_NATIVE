@@ -8,7 +8,7 @@ const MainPage = () => {
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
 
             <View style={{ width: 150 }}>
-                <Button title="Go to Profile" onPress={() => router.push("/(home)/model")} />
+                <Button title="Go to Profile" onPress={() => router.push("/Profile")} />
 
             </View>
         </View>
